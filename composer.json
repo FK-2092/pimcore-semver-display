@@ -1,0 +1,20 @@
+{
+    "name": "fk/pimcore-semver-display",
+    "type": "pimcore-bundle",
+    "autoload": {
+        "psr-4": {
+            "PageVersionBundle\\": "src/PageVersionBundle"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "pimcore": {
+            "bundles": [
+                "PageVersionBundle\\PageVersionBundle"
+            ]
+        }
+    },
+    "require": {
+        "pimcore/pimcore": "^10.1"
+    }
+}

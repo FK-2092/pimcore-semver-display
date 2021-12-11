@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "prepare": "husky install && cp .huskyrc ~/.huskyrc",
+    "test": "echo 'No tests defined'",
+    "push-tags": "git push --follow-tags origin $(git branch --show-current)",
+    "release": "standard-version && npm run push-tags",
+    "release:minor": "standard-version --release-as minor && npm run push-tags",
+    "release:patch": "standard-version --release-as patch && npm run push-tags",
+    "release:major": "standard-version --release-as major && npm run push-tags"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "husky": "^7.0.2",
+    "standard-version": "^9.3.2"
+  }
+}
